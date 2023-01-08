@@ -1,0 +1,1270 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+button.normal {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 25px;
+  margin-top: 0;
+  color: black;
+  background-color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+
+button.white {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  margin-top: 25px;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid white;
+  outline: none;
+  transition: 0.2s;
+}
+
+body {
+  width: 100%;
+}
+
+// header bar
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 80px;
+  background-color: #e3e6f3;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  span {
+    font-size: 2.5rem;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: 900;
+    text-shadow: 1.5px 2px lightslategrey;
+  }
+
+  #navbar {
+    display: flex;
+    align-items: flex-start;
+    justify-self: center;
+
+    li {
+      list-style: none;
+      padding: 0 20px;
+      position: relative;
+
+      a {
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        color: #1a1a1a;
+        transition: 0.3s ease;
+        &:hover,
+        &.active {
+          color: #088170;
+        }
+        &.active::after,
+        &:hover::after {
+          content: "";
+          width: 30%;
+          height: 2px;
+          background-color: #088170;
+          position: absolute;
+          bottom: -4px;
+          left: 20px;
+        }
+      }
+    }
+  }
+}
+
+#mobile {
+  display: none;
+  align-items: center;
+
+  .bar:hover {
+    color: #088178;
+    cursor: pointer;
+  }
+}
+
+#close {
+  display: none;
+}
+// Home Page
+#hero {
+  background-image: url("../img/hero.gif");
+  height: 85vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 50% right 0;
+  padding: 10px 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  h4 {
+    padding-bottom: 15px;
+  }
+
+  h1 {
+    color: #088170;
+  }
+
+  button {
+    background-image: url(../img/button.png);
+    background-color: transparent;
+    color: #088170;
+    border: 0;
+    padding: 5px 100px 14px 60px;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+  }
+}
+
+// Feature
+#feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .fe-box {
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+
+    &:hover {
+      box-shadow: 10px 10px 54px rgba(70, 62, 211, 0.1);
+      cursor: pointer;
+    }
+
+    img {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    h6 {
+      display: inline-block;
+      padding: 5px 8px 6px 8px;
+      line-height: 1;
+      border-radius: 4px;
+      color: #088178;
+      background-color: #fddde4;
+    }
+    &:nth-child(2) h6 {
+      background-color: #d1e8f2;
+    }
+    &:nth-child(3) h6 {
+      background-color: #cdd4f8;
+    }
+    &:nth-child(4) h6 {
+      background-color: #f6dbf6;
+    }
+    &:nth-child(5) h6 {
+      background-color: #fff2e5;
+    }
+    &:nth-child(6) h6 {
+      background-color: #cdebbc;
+    }
+  }
+}
+
+#product1 {
+  text-align: center;
+
+  .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+  }
+  .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+
+    &:hover {
+      box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    img {
+      width: 100%;
+      height: 60%;
+      border-radius: 20px;
+    }
+
+    .like {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50px;
+      background-color: #e8f6ea;
+      font-weight: 500px;
+      color: #088178;
+      border: 1px solid #cce7d0;
+      position: absolute;
+      bottom: 20px;
+      right: 10px;
+
+      &:hover {
+        color: rgb(204, 88, 88);
+        background-color: lightpink;
+      }
+    }
+    .des {
+      text-align: start;
+      padding: 10px 0;
+
+      .name {
+        color: #606063;
+        font-size: 12px;
+      }
+      .h5 {
+        padding-top: 7px;
+        color: #1a1a1a;
+        font-size: 14px;
+      }
+      #star {
+        font-size: 12px;
+        color: rgb(243, 181, 25);
+      }
+
+      .m1 {
+        padding: 7px 0 0 4px;
+
+        font-size: 15px;
+        font-weight: 700;
+        color: grey;
+      }
+    }
+  }
+}
+
+// Banner
+#banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("../img/banner/nft2.png");
+  width: 100%;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+
+  h4 {
+    color: white;
+    font-size: 30px;
+    font-weight: 1000;
+  }
+
+  h2 {
+    color: white;
+    font-size: 50px;
+    padding: 5px 20px;
+    margin-top: 5px;
+
+    span {
+      text-shadow: 5px 5px #558abb;
+    }
+  }
+  button {
+    margin-top: 15px;
+  }
+  button:hover {
+    background-color: #0ba18d;
+    color: white;
+  }
+}
+
+// sm-Banner
+#sm-banner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    background-image: url("../img/banner/b17.jpg");
+    min-width: 500px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+  }
+
+  .banner-box2 {
+    background-image: url("../img/banner/NFT1.gif");
+  }
+
+  h4 {
+    color: white;
+    font-size: 30px;
+    font-weight: 300;
+  }
+  h2 {
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+  }
+  span {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 15px;
+  }
+  .banner-box:hover button {
+    background-color: #088170;
+    border: 1px solid #088178;
+  }
+}
+
+//banner3
+#banner3 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 80px;
+  .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    background-image: url("../img/banner/nft4.gif");
+    min-width: 30%;
+    height: 35vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    margin-bottom: 20px;
+  }
+
+  .banner-box2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+      url("../img/banner/nft5.jpg");
+  }
+
+  .banner-box3 {
+    background-image: url("../img/banner/b7.jpg");
+  }
+
+  h2 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 22px;
+    text-shadow: 2px 2px gray;
+  }
+
+  h3 {
+    color: red;
+    font-weight: 800;
+    font-size: 17px;
+    text-shadow: 2px 2px gray;
+  }
+}
+
+// Newsletter
+
+#newsletter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url("../img/banner/b14.png");
+  background-repeat: no-repeat;
+  background-position: 20% 30%;
+  background-color: #041e42;
+
+  h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #818ea0;
+    span {
+      color: #ffbd27;
+    }
+  }
+
+  .form {
+    display: flex;
+    width: 40%;
+  }
+  input {
+    height: 3.125rem;
+    padding: 0 1.25rem;
+    font-size: 15px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  button {
+    background-color: #088178;
+    color: white;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+// Footer
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .logo2 {
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+  p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+  }
+
+  a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+
+    &:hover {
+      color: #088178;
+    }
+  }
+  .follow {
+    i {
+      color: #465b52;
+      padding-right: 4px;
+      cursor: pointer;
+
+      &:hover {
+        color: #088178;
+      }
+    }
+  }
+
+  .install {
+    img {
+      margin: 10px 0 15px 0;
+    }
+    .row {
+      img {
+        border: 1px solid #088178;
+        border-radius: 6px;
+      }
+    }
+  }
+  .copyright {
+    width: 100%;
+    text-align: center;
+    margin-bottom: -20px;
+  }
+}
+
+// shop page
+#page-header {
+  background-image: url("../img/banner/nft9.gif");
+  width: 100%;
+  height: 50vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 14px;
+
+  h2,
+  p {
+    color: white;
+  }
+}
+#pagination {
+  text-align: center;
+  a {
+    text-decoration: none;
+    background-color: #088178;
+    padding: 13px 20px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+    i {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}
+
+// Single product
+#nft {
+  display: flex;
+  margin-top: 20px;
+
+  .single-pro-nft {
+    width: 40%;
+    margin-right: 50px;
+  }
+  .single-pro-details {
+    width: 50%;
+    padding: 30px 0 0 40px;
+
+    .eth {
+      font-size: 40px;
+      color: #606063;
+      margin-bottom: 8px;
+    }
+
+    .m2 {
+      font-size: 30px;
+      color: rgb(108, 108, 24);
+    }
+
+    h4 {
+      padding: 30px 0 10px 0;
+    }
+
+    select {
+      display: block;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+    }
+    input {
+      width: 50px;
+      height: 47px;
+      padding-left: 10px;
+      font-size: 16px;
+      margin-right: 10px;
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      background-color: #088178;
+      color: white;
+    }
+    span {
+      line-height: 25px;
+    }
+  }
+}
+
+.small-img-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-img-col {
+  flex-basis: 24%;
+  cursor: pointer;
+}
+
+// Blog Page
+#page-header {
+  &.blog-header {
+    background-image: url(../img/banner/b19.jpg);
+  }
+}
+
+#blog {
+  padding: 150px 150px 0 150px;
+  .blog-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding-bottom: 90px;
+    h1 {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      font-size: 70px;
+      font-weight: 700;
+      color: #c9cbce;
+      z-index: -9;
+    }
+  }
+  .blog-img {
+    width: 50%;
+    margin-right: 40px;
+  }
+  .blog-details {
+    width: 50%;
+    a {
+      text-decoration: none;
+      font-size: 11px;
+      color: black;
+      font-weight: 700;
+      position: relative;
+      transition: 0.3s ease;
+
+      &::after {
+        content: "";
+        width: 50px;
+        height: 1px;
+        background-color: black;
+        position: absolute;
+        top: 8px;
+        right: -60px;
+      }
+      &:hover {
+        color: #088178;
+        &::after {
+          background-color: #088178;
+        }
+      }
+    }
+  }
+  img {
+    width: 80%;
+    height: 400px;
+    object-fit: cover;
+  }
+}
+
+// About Page
+#page-header {
+  &.about-header {
+    background-image: url(../img/about/banner.png);
+  }
+}
+
+#about-head {
+  display: flex;
+  align-items: center;
+  div {
+    padding-left: 40px;
+  }
+
+  img {
+    width: 50%;
+    height: 70vh;
+  }
+}
+
+#about-debut {
+  text-align: center;
+  .gif {
+    display: flex;
+    width: 60%;
+    height: 60%;
+    margin: 30px auto 0 auto;
+    background-color: rgba(165, 161, 161, 0.4);
+    border-radius: 40px;
+
+    img {
+      display: block;
+      margin: auto;
+      width: 50%;
+      height: 60vh;
+    }
+  }
+}
+
+// Contact Page
+
+#page-header {
+  &.contact-header {
+    background-image: url(../img/banner/b1.jpg);
+  }
+}
+#contact-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .details {
+    width: 40%;
+    span {
+      font-size: 12px;
+    }
+    h2 {
+      font-size: 26px;
+      line-height: 36px;
+      padding: 20px 0;
+    }
+    h3 {
+      font-size: 16px;
+      padding-bottom: 15px;
+    }
+    li {
+      list-style: none;
+      display: flex;
+      padding: 10px 0;
+      i {
+        font-size: 14px;
+        padding-right: 22px;
+      }
+      p {
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+  }
+  .map {
+    width: 55%;
+    height: 400px;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+#form-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  padding: 80px;
+  border: 1px solid rgb(199, 197, 197);
+  form {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    span {
+      font-size: 12px;
+    }
+    h2 {
+      font-size: 26px;
+      line-height: 35px;
+      padding: 20px 0;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px 15px;
+      outline: none;
+      margin-bottom: 20px;
+      border: 1px solid #e1e1e1;
+    }
+
+    button {
+      background-color: #088178;
+      color: white;
+    }
+  }
+  .people {
+    div {
+      padding-bottom: 25px;
+      display: flex;
+      align-items: flex-start;
+      img {
+        width: 65px;
+        height: 60px;
+        object-fit: cover;
+        margin-right: 15px;
+      }
+      p {
+        margin: 0;
+        font-size: 13px;
+        line-height: 25px;
+        span {
+          display: block;
+          font-size: 16px;
+          font-weight: 600;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+// Cart Page
+#cart {
+  overflow-x: auto;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+    img {
+      width: 70px;
+    }
+    td {
+      &:nth-child(1) {
+        width: 100px;
+        text-align: center;
+      }
+      &:nth-child(2) {
+        width: 150px;
+        text-align: center;
+      }
+      &:nth-child(3) {
+        width: 250px;
+        text-align: center;
+      }
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6) {
+        width: 150px;
+        text-align: center;
+      }
+      &:nth-child(5) {
+        input {
+          width: 70px;
+          padding: 10px 5px 10px 15px;
+        }
+      }
+    }
+    thead {
+      border: 1px solid #e2e9e1;
+      border-left: none;
+      border-right: none;
+      td {
+        font-weight: 700;
+        font-size: 13px;
+        padding: 18px 0;
+      }
+    }
+    tbody {
+      tr {
+        td {
+          padding-top: 15px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+#cart-add {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  #coupon {
+    width: 50%;
+    margin-bottom: 30px;
+    h3 {
+      padding-bottom: 15px;
+    }
+    input {
+      padding: 12px 20px;
+      outline: none;
+      width: 60%;
+      margin-right: 10px;
+      border: 1px solid #e2e0e1;
+    }
+    button {
+      background-color: #088178;
+      color: white;
+      padding: 5px 18px 10px 18px;
+    }
+  }
+  #subtotal {
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid #e2e9e1;
+    padding: 30px;
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+      td {
+        width: 50%;
+        border: 1px solid #e2e9e1;
+        padding: 10px;
+        font-size: 13px;
+      }
+    }
+    h3 {
+      padding-bottom: 15px;
+    }
+    button {
+      background-color: #088178;
+      color: white;
+      padding: 5px 18px 10px 18px;
+    }
+  }
+}
+
+// Media RWD
+@media (max-width: 821px) {
+  .section-p1 {
+    padding: 40px 40px;
+  }
+  #page-header {
+    &.shop-header {
+      width: 100%;
+      height: 40vh;
+
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 200px;
+    background-color: #e3e6f3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.2);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+
+    li {
+      margin-bottom: 25px;
+    }
+    &.active {
+      right: 0px;
+    }
+  }
+
+  #mobile {
+    display: flex;
+    align-items: center;
+
+    i {
+      color: #1a1a1a;
+      font-size: 24px;
+      padding-left: 20px;
+    }
+  }
+  #close {
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: rgb(27, 25, 25);
+    font-size: 24px;
+  }
+
+  #lg-bag {
+    display: none;
+  }
+
+  #hero {
+    height: 60vh;
+    padding: 0px 80px;
+    background-position: top 30% right 30%;
+    h2 {
+      font-size: 30px;
+      margin: -20px 0;
+    }
+
+    p {
+      font-size: 13px;
+    }
+    button {
+      position: absolute;
+      right: 0;
+      padding: 0px 50px 12px 18px;
+      margin-top: 5px;
+      font-size: 15px;
+    }
+  }
+
+  #feature {
+    justify-content: center;
+
+    .fe-box {
+      margin: 15px 15px;
+    }
+  }
+
+  #product1 {
+    .pro-container {
+      justify-content: center;
+    }
+    .pro {
+      margin: 15px 15px;
+    }
+  }
+  #banner {
+    height: 43vh;
+  }
+
+  #sm-banner {
+    .banner-box {
+      min-width: 100%;
+      height: 50vh;
+      margin-bottom: 20px;
+    }
+  }
+
+  #banner3 {
+    padding: 0 40px;
+    .banner-box {
+      width: 28%;
+    }
+  }
+  #newletter {
+    .form {
+      width: 70%;
+    }
+  }
+  // Blog
+  #blog {
+    padding: 100px 20px 0 150px;
+    .blog-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .blog-img {
+      width: 100%;
+      margin-right: 0px;
+      margin-bottom: 30px;
+    }
+    .blog-details {
+      width: 100%;
+    }
+  }
+  //   About Page
+  #about-debut {
+    .gif {
+      img {
+        display: block;
+        margin: auto;
+        width: 60%;
+        height: 50vh;
+      }
+    }
+  }
+  // Contact Page
+  #form-details {
+    padding: 40px;
+    form {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  #header {
+    padding: 10px 30px;
+  }
+  #page-header {
+    &.shop-header {
+      width: 100%;
+      height: 30vh;
+    }
+  }
+
+  .section-p1 {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  #hero {
+    padding: 0 20px;
+    background-position: 55%;
+  }
+  #feature {
+    justify-content: space-between;
+    .fe-box {
+      width: 45%;
+      margin: 0 0 15px 0;
+    }
+  }
+  #product1 {
+    .pro {
+      width: 100%;
+    }
+  }
+  #banner {
+    height: 40vh;
+  }
+  #sm-banner {
+    .banner-box {
+      height: 40vh;
+    }
+    .banner-box2 {
+      margin-top: 20px;
+    }
+  }
+  #banner3 {
+    padding: 0 20px;
+
+    .banner-box {
+      width: 100%;
+    }
+  }
+  #newsletter {
+    padding: 40px 20px;
+    .form {
+      width: 100%;
+    }
+  }
+
+  //   single product
+
+  #nft {
+    display: flex;
+    flex-direction: column;
+    .single-pro-nft {
+      width: 100%;
+      margin-right: 0px;
+    }
+    .single-pro-details {
+      width: 100%;
+    }
+  }
+
+  //Blog page
+  #blog {
+    padding: 100px 20px 0 150px;
+    .blog-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .blog-img {
+      width: 100%;
+      margin-right: 0px;
+      margin-bottom: 30px;
+    }
+    .blog-details {
+      width: 100%;
+    }
+  }
+  //About Page
+
+  #about-head {
+    flex-direction: column;
+    img {
+      width: 100%;
+    }
+  }
+  #about-debut {
+    .gif {
+      img {
+        width: 100%;
+        height: 30%;
+      }
+    }
+  }
+  //   contact Page
+  #contact-details {
+    flex-direction: column;
+    .details {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .map {
+      width: 100%;
+    }
+  }
+  #form-details {
+    margin: 10px;
+    padding: 30px 10px;
+    flex-wrap: wrap;
+    form {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  // Cart Page
+  #cart-add {
+    flex-direction: column;
+    #coupon {
+      width: 80%;
+      display: block;
+      margin: 20px 0 20px 80px;
+    }
+    #subtotal {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+}

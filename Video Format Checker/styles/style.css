@@ -1,0 +1,30 @@
+table {
+  border: 2px solid black;
+  width: 80%;
+}
+
+td {
+  border: 1px solid black;
+}
+
+#thisFormatResult,
+#thisDurationResult {
+  font-weight: bold;
+}
+
+#dropbox {
+  width: 500px;
+  height: 200px;
+  padding: 10px;
+  background-color: lightgray;
+  color: blue;
+  font-weight: bold;
+  font-size: 20px;
+  border: 5px dashed black;
+}
+
+#canvas {
+  width: 480px;
+  height: 300px;
+  border: 2px solid blue;
+}/*# sourceMappingURL=style.css.map */

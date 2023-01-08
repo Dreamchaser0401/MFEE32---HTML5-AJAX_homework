@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>安妮亞打磚塊</title>
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Germania+One"
+    />
+    <link rel="shortcut icon" href="./img/head.png" type="image/x-icon" />
+    <style>
+      * {
+        font-family: "Germania One";
+      }
+      #sound {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        position: absolute;
+        top: 550px;
+        left: 15px;
+      }
+      #gameover {
+        position: absolute;
+        width: 400px;
+        height: 500px;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+      }
+      #youwon {
+        width: 400px;
+        position: absolute;
+        top: 110px;
+        left: -8px;
+        display: none;
+      }
+      #youlose {
+        width: 400px;
+        position: absolute;
+        top: 100px;
+        left: 0px;
+        display: none;
+      }
+      #restart {
+        position: absolute;
+        top: 340px;
+        left: 155px;
+        cursor: pointer;
+        font-size: 1.25em;
+        color: #fff;
+      }
+
+      h1 {
+        margin-left: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>安妮亞打磚塊</h1>
+    <div class="sound">
+      <img src="img/SOUND_ON.png" alt="" id="sound" />
+    </div>
+
+    <div id="gameover">
+      <img src="img/win.gif" alt="" id="youwon" />
+      <img src="img/lose2.gif" alt="" id="youlose" />
+      <div id="restart">再來一次拉!</div>
+    </div>
+
+    <canvas id="breakout" width="400" height="500"></canvas>
+
+    <script src="components.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
